@@ -1,0 +1,258 @@
+# 1.primitive datatypes  && operator
+# 2.variables  && collections
+# 3.control flow && iterables
+# 4.functions
+# 5. modules
+# 6. class (OOP'S) - inheritances
+# 7. Advances && concepts
+
+invented by 
+        - guido van rossam
+
+what is python ?
+    it's general purpose  high level programming language
+
+what is interpreter ?
+    It has run the code line by line ,There is no need for compliation 
+
+what is an command ?
+    if you did any works after that what is inside that so understand purpose use the command  symbol single line(#)  multi line command (''' ''')
+
+    # hii
+    ''' this 
+    is 
+    '''
+
+    NOTE -- need complasary for whatever use there for understand after the few days
+
+Line ?
+    
+ NOTE   In idle --- each line will have result -- it works numbers -- simplfy the line 
+
+primitive operators ? | arithmetic
+    we have 4 types of operators
+
+    adiition (+)
+    subtraction (-)
+    multiplication (*)
+    division -- true(/) 1.999 and floor(//) 1
+    mudulos (%) -- reminder
+    exponentioal (**)
+
+    NOTE -- in normal idle it will work these operators directly that's all
+
+CLEAR the idle screen -- os.system("clear")
+
+Order of execution ?
+    BODMAS Rules -- Bracket | function  ,Order | exponent ,Divison,Multi,addition,subtraction
+
+DataTypes 
+    1. integer
+    2. float
+    3. Boolean 
+        - True
+        - False
+    4. String --'',"",''' ''',  we can assign the string in three ways
+	Collections
+	1.list
+	2.tuples
+	3.set
+	4.dictionary
+
+
+Comparision operator ? 
+    it sould compare the two data  return ---True or False
+    To check the conditions 
+        == equal to
+        != not equal to
+        > greaterthan
+        < lessthan
+        >= greterthan or qual to
+        <= lesthan or eqaul to
+
+    spl
+        is -- compare the same address or not | id 
+        in -- means the data will there are not in collections
+
+How chaining the comparisions ?
+    You need to apply logical gates:
+        1.AND  (True And True) -- True if two was true it will be true other wise --False
+        2.OR    (True Or Flase) -- True --if any one is true -- True -- other --False
+        #.NOT  opposite True - False  False - True
+
+
+NOTE -- in single value assign the value   -5 to 256 are same address after that different address assign 
+	Why ? 
+		Memory management
+			mutable - we can change after assign  and immutable - we cannot change after assign
+			list,set,dictionary these are 		  int,float,tuple,string,complex		  
+ 
+			a=1  b=1   a is b was True same address
+			a=[1,2,3]  a.append(4)
+			id(a)-01   id(a)-01 same address after the modification same address
+
+String
+	
+	'',"",''' ''''
+	strings are immutable
+	
+	In string we have to store the values
+			Python automatically interns:
+				small strings
+				** identifier-like strings (no spaces, only letters/numbers/_)
+			
+			| Data Type | Same Address Possible?        |
+			| --------- | ----------------------------  |
+			| Integers  | ✅ Yes (small values)         |
+			| Strings   | ✅ Yes (interned)             |
+			| Lists     | ❌ No (unless same reference) |
+			| Tuples    | ✅ Sometimes                  |
+			| Sets/Dict | ❌ No                         |
+			
+			in -5 to 256  static address
+
+
+			✅ Python Data Types – Mutability & Address Behavior
+			| Data Type | Mutable / Immutable | Value Change Possible? | Address Change on Modify   | Example                   |
+			| --------- | ------------------- | ---------------------- | -------------------------- | ------------------------- |
+			| `int`     | ❌ Immutable         | ❌ No                   | ✅ Yes (new object created) | `a = 10 → a = 20`         |
+			| `float`   | ❌ Immutable         | ❌ No                   | ✅ Yes                      | `a = 1.5 → a = 2.5`       |
+			| `string`  | ❌ Immutable         | ❌ No                   | ✅ Yes                      | `"hi" → "hello"`          |
+			| `list`    | ✅ Mutable           | ✅ Yes                  | ❌ No (same object)         | `a = [1,2] → a.append(3)` |
+			| `tuple`   | ❌ Immutable         | ❌ No                   | ✅ Yes                      | `(1,2) → (1,2,3)`         |
+
+
+del keyword ?
+    delete the item inside the list also delete variable as well as objects
+        l=[1,2]
+        del l
+        del l[0]
+
+         NOTE --only if the data was mutable its work on it immutable not able to work
+
+IN | not in ?
+    if the data in the collection --true or false 
+    if the data not in collection --true or false
+
+tuple
+
+packing & unpacking
+    a=0
+    b=0
+    a,b=1,2 -- unpacking
+
+    a,b,c=(1,2,3,4,5) -- error
+    a,*b,c=1,2,3,4,5----
+    a=1
+    c=last value  5
+    b= create a list collect all value    
+
+
+Swap
+
+    a=0
+    b=1
+    a,b=b,a  -- swap two variable
+    a,b=(b,a)  internal will do it tuple
+
+    a,b=[b,a]
+
+
+dictionary
+    dict ()
+
+    key and value pairs
+
+    keys are immutable datatype only
+        int
+        float
+        Boolean
+        string
+
+    at the last computer any data type hash  come into a string 
+
+    We can use (In) operator in dictionary compare the 
+
+set ?
+    it's a mutable 
+    set is a unorder collection there is no indexing   
+
+    & intersection  both are set having item
+    | union   both set present new set
+    - differences  the firstset not present in 2 set 
+    ^ syymentric differences  comparetwo sets which not repeated for both set that give result
+    
+    
+Looping (iteratable) 
+    while and for 
+    while for numbers 
+    for -- for collections 
+
+Exceptions handeling :
+    syntax error --- we can't handeling
+    runtime arror  --- we can handeling
+    
+    means error 
+
+        try and except:
+        try --- true statement block
+        except --- false statement block
+        else --   if try was runiing succesfully
+        finalyy --- complasary work the statement when true or false any way it's work
+
+
+    eg :
+            a=10
+        try:
+            a=a/0
+        except Exception as e :   # exception having all type of error
+            print(e)
+
+        import sys               # moduls
+        a=10
+        b=[1,2,3,4]
+        c=5
+        try:                    
+            c = a+ b[5]
+        except  NameError as e:
+            print("name error")
+            print(e)
+        except IndexError as e:
+            print("index  error")
+            print(e)
+        else:
+            print("all good after the if try block was success")
+        finally:
+            print("all done")
+            
+File handeling:
+    we have open( )--function to open the files
+
+    var = open("file_name.extention","mode")
+    if want read  --print(var.read())
+    var.close()
+
+    with use  --without using ---close()
+     with open(---) as var:
+     what you want do it
+
+
+    we have modes  --- w,r,a
+     w-- write---write()---single
+                writelines---morethan one
+    r-- read---read()--- read all data'S
+                readline() --- read one line
+                readlines() --- all data in the form of list
+    a-- append(update)--same write mode as it is 
+
+    if we want conditions makes how many line you want perferences  while Looping
+
+
+
+
+
+
+
+
+
+
