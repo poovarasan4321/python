@@ -194,3 +194,113 @@
 #         break
 
 
+
+# anagram
+# s1='eat'
+# s2='bat'
+
+# print(sorted(s1),sorted(s2))
+
+
+# from collections import Counter
+# print(Counter(s1) == Counter(s2))
+
+# s1 = "eat"
+# s2 = "tea"
+
+# # Step 1: length check
+# if len(s1) != len(s2):
+#     print(False)
+# else:
+#     count = {}
+
+#     # Step 2: count characters in s1
+#     for ch in s1:
+#         if ch in count:
+#             count[ch] += 1
+#         else:
+#             count[ch] = 1
+
+#     # Step 3: reduce using s2
+#     for ch in s2:
+#         if ch in count:
+#             count[ch] -= 1
+#         else:
+#             print(False)
+#             break
+
+#     # Step 4: check all values = 0
+#     for val in count.values():
+#         if val != 0:
+#             print(False)
+#             break
+#     else:
+#         print(True)
+
+
+
+# *a,b,c=[1,2,4,5,7]
+# print(a,b,c)
+
+
+
+# how accept the value store inside the variable in the form of dict
+# def add(**kwargs):
+#     return kwargs
+
+# print(add(a=10,b=20))
+
+
+# def add(*,a,b,c):
+#     return a,b,c
+
+# print(add(a=10,c=30,b=40))
+
+# def add(*args,**kwargs):
+#     return args,kwargs
+
+# print(add(1,2,3,4,5,a=10))
+
+
+# scope
+# global
+
+# x=10
+# def fun():
+#     x=20
+# print(x)
+
+
+x=10
+# def fun():
+#     x=20
+#     print(x)
+#     def inner():
+#         nonlocal x
+#         x+=30
+#     inner()
+#     print(x)
+# fun()
+
+
+#  this is clouser scope under enclosing 
+
+# def adder(x):
+#     def inner(y):
+#         return x+y
+#     return inner
+
+# result=adder(10)
+# print(result)
+# print(result(20))
+
+def outer(x):
+    def add(y):
+        return x+y
+    def sub(y):
+        return x-y
+    return add,sub
+add_,sub_=outer(10)
+
+print(add_(50))
+print(sub_(50))

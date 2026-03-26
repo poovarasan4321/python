@@ -247,6 +247,55 @@ File handeling:
 
     if we want conditions makes how many line you want perferences  while Looping
 
+Function 
+    set of instruction to do a particullar task
+
+    def f_name(parametres):
+        statements
+        retrun value
+
+    print(f_name(value/arguments) )   
+    def --- key word
+    parametres--- variables
+    return -- type its  store a values
+    f_name()---call a function
+
+    Types of arg:
+        default ----def add(a=10)   if we can can accept or else it takes defaault
+
+        positional ----add(a,b) --add(10,20)  --- 10 ---a 20----b   order is important
+
+        keyword ----add(a,b) ------add(a=10,b=20)  
+
+        variable number of positional arguments    unpacking  
+            add(a,*b)   add(1,2,3,4,5,5) --- a goes a other inside the b []
+            add(*a,b)   add((1,2,3,4,5,5))  ---last goes to b other goes a []
+
+        NOTE  ?
+             variable number of keyword arguments:--store in the form of dictionary 
+
+            def add(**kwargs):
+                print(**kwargs)
+                return kwargs ----- return {"a":1,"b":20} 
+
+            print(add(a=1,b=20))
+
+    Order of use function --
+
+            add(position,keyword,*args,**kwargs)
+
+    scope--global ,local,enclosing,built in scope
+
+    global key,nonLocal,key
+
+        first class function:
+            def outer(x):
+                def add(y):
+                    return x+y
+                def sub(y):
+                    return x-y
+                return add,sub
+            r=outer(10)
 
 
 
