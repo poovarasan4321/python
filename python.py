@@ -1,69 +1,3 @@
-# def calculator():
-#     a=int(input("Enter The Number: "))
-#     b=int(input("Enter The Number: "))
-#     print("Choose The Operation")
-#     print('''
-#           1. addition
-#           2.subtraction
-#           3.multiplication
-#           4.true division
-#           5.floor division
-#           6.modules
-#           7.Power
-#           ''')
-#     user=int(input("Enter The Operation: "))
-
-#     if user==1:
-#         print("addition",a+b)
-#     elif user==2:
-#         print("subtraction",a-b)
-#     elif user==3:
-#         print("mul",a*b)
-#     elif user==4:
-#         print("Truedivision",a/b)
-#     elif user==5:
-#         print("floordivision",a//b)
-#     elif user==6:
-#         print("modules",a%b)
-#     elif user==7:
-#         print("power",a**b)
-
-
-# def calculator():
-#     nums = list(map(int, input("Enter numbers (space separated): ").split()))
-
-#     print("Choose The Operation")
-#     print('''
-#           1. Addition
-#           2. Subtraction
-#           3. Multiplication
-#           4. True Division
-#           ''')
-
-#     user = int(input("Enter The Operation: "))
-
-#     if user == 1:
-#         print("Addition:", sum(nums))
-
-#     elif user == 2:
-#         result = nums[0]
-#         for i in nums[1:]:
-#             result -= i
-#         print("Subtraction:", result)
-
-#     elif user == 3:
-#         result = 1
-#         for i in nums:
-#             result *= i
-#         print("Multiplication:", result)
-
-#     elif user == 4:
-#         result = nums[0]
-#         for i in nums[1:]:
-#             result /= i
-#         print("True Division:", result)
-
-# calculator()
 
 # copy
 # l=[1,2,[3],'hello']
@@ -103,7 +37,18 @@
 
 # switch case in python  -- match
 
+# var=10
 
+# match var:
+#     case 1:
+#         print("hello")
+#     case 10:
+#         print("This Match in python  Or Other inn switch case ")
+
+
+
+
+#  Exceptional Hand;ing in python 
 # import sys
 
 # try :
@@ -112,7 +57,10 @@
 #     print(sys.exc_info()[0])
 
 
+
 # import sys   #  it contains  error for system this a modul
+
+
 
 # import sys
 # a=10
@@ -130,6 +78,8 @@
 #     print("all good after the if try block was success")
 # finally:
 #     print("all done")
+
+
 
 
 # import sys
@@ -158,6 +108,7 @@
 
 
 # n=5
+
 # for i in range(n):
 #     for j in range(n):
 #         if i+j > n:
@@ -166,7 +117,9 @@
 #             print("*",end='')
 #     print()
 
+
 # pyramid patter
+
 # n=5
 # for i in range (n):
 #     print(" "*(n-i-1)+"*"*(2*i+1))
@@ -196,6 +149,7 @@
 
 
 # anagram
+
 # s1='eat'
 # s2='bat'
 
@@ -271,7 +225,7 @@
 # print(x)
 
 
-x=10
+# x=10
 # def fun():
 #     x=20
 #     print(x)
@@ -285,6 +239,8 @@ x=10
 
 #  this is clouser scope under enclosing 
 
+
+
 # def adder(x):
 #     def inner(y):
 #         return x+y
@@ -294,13 +250,146 @@ x=10
 # print(result)
 # print(result(20))
 
-def outer(x):
-    def add(y):
-        return x+y
-    def sub(y):
-        return x-y
-    return add,sub
-add_,sub_=outer(10)
+# def outer(x):
+#     def add(y):
+#         return x+y
+#     def sub(y):
+#         return x-y
+#     return add,sub
+# add_,sub_=outer(10)
 
-print(add_(50))
-print(sub_(50))
+# print(add_(50))
+# print(sub_(50))
+
+
+
+
+# lambdaw function
+
+
+# print((lambda var : var > 3)(5))
+# print((lambda x : "yes" if x >3 else "no")(5))
+# result = lambda x :"yes" if x > 3 else "no"
+# print(result(5))
+
+
+
+
+
+#                        map
+
+
+
+
+# number=[1,2,3,4,5]
+# print(list(map(lambda x : x+10,number)))
+
+# def square(x):
+#     return x*x
+
+# print(list(map(square,number)))
+
+
+# filter function
+# def greater(x):
+#     return x > 2
+    
+# print(list(filter(greater,number)))
+
+
+
+#           MOdules
+
+
+
+# from file_handling import add
+#import math
+
+# f=math.factorial(5)
+# print(f)
+
+# print(math.lcm(6,18))
+
+# print(math.floor(2.9))
+
+# l=[x for x in range(1,100)]
+
+# def nums(l):
+#     for i in l:
+#         yield i
+# print(list(nums(l)))
+
+
+
+
+ #              BEST EXAMPLE For Genarator
+
+# it execute one one time come and store value go out side resume function ---this is the main differentc
+
+# l=[x for x in range(1,100)]
+
+# def d_numbers(l):
+#     for o in l:
+#         print("every time it will come ")
+#         yield o*2
+
+# for i in d_numbers(l):
+#     print(i)
+
+
+
+# see this different yield and return   
+
+#--- it runs fully once return stop execution that all matter keeps all data 
+# def normal(l):
+#     out=[]
+#     for i in l:
+#         print("normla function")
+#         out.append(i*2)
+#     return out
+
+# for i in normal(l=[10,20,30,40,50]):
+#     print(i)
+
+# decorator :
+
+
+# def outer(func):
+#     def inner(*args,**kwargs):
+#         print("hello")
+#         func()
+#         print("welcome")
+#     return inner
+
+# @outer
+# def poo():
+#     print("poovarsan")
+
+# outer(poo())
+
+
+
+# # recusive 
+# def num(l):
+#     out=[]
+#     for i in l:
+#         if isinstance(i,list):
+#             out.extend(num(i))
+#         else:
+#             out.append(i)
+#     return out
+
+# print(num(l=[1,[2,3,[4,5,[6,7]]]]))
+
+
+
+
+# def flatten(l):
+#     for i in l:
+#         if isinstance(i, list):
+#             yield from flatten(i)
+#         else:
+#             yield i
+
+
+# oops 

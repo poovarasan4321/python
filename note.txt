@@ -297,10 +297,76 @@ Function
                 return add,sub
             r=outer(10)
 
+Lambda Function:
+syntax:
+    (lambda var:Expression)([value 5])
+
+    (lambda var :"TSB" if Experssion else "FSB" )(value)
+
+    result = lambda x : x > 3
+    print(result(5))
 
 
+Map function:
+
+    NOTE--- we should never pass caall the function 
+
+    map(function,*iterables)
+    typecasting is impoertan or else --- give s addres
+
+filter function :
+    list(filter(function,*iterable))
+
+Modules:
+     some one is there you can access import modules
+
+     eg :  import math
+     import os
+     import sys
+     
+    Syntax :
+
+        if you access the folder/file as a moduls --** in file sholud have (__init__.py)   
+        other folder
+        from folder_name.filename import specific_function /function/variable
+
+        other folder
+        from folder_name.filename import * ---- all functions
+
+        same folder:
+            from .file_name import */function/var
+            
+            (.)----means same file  
+            from .file_name import */function/var
+            
+Genartor function:
+    it's having (yield keyword)
+    yield is a key word use for pause the execution store the value in collection --
+    or return the value --- go back on the function run the execution
+
+    when you have huge file ---directly you can iterate but it has so much of time 
+    instead return ue yield it easy one by one fetch give result execute function
+
+    time was ok but memory and computer stress was less easyly reable 
 
 
+Decorator :
+    if we have one function add the extra functionalites for exsiting function :
+    @decorator 
+
+    eg:
+        # def outer(func):
+        #     def inner(*args,**kwargs):
+        #         print("hello")
+        #         func()
+        #         print("welcome")
+        #     return inner
+
+        # @outer
+        # def poo():
+        #     print("poovarsan")
+
+        # outer(poo())
 
 
 
