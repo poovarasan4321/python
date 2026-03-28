@@ -393,3 +393,24 @@
 
 
 # oops 
+
+class car():
+    
+    #constructor
+    def __init__(self,name,age):    
+        self.name=name  #public
+        self.__age=age  #private
+    
+    def getter(self):   #getter method
+        return self.__age 
+    
+    def setter(self,age):  #setter method
+        self.__age=age
+
+obj1=car("poovarasan",20)
+print(obj1.name)
+print(obj1.getter())
+obj1.setter(35)
+print(obj1.getter())
+
+    
